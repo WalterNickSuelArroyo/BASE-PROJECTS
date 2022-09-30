@@ -1,0 +1,62 @@
+.canvas {
+    width: 500px;
+    height: 600px;
+    background-color: #4f0d00;
+    overflow: hidden;
+    filter: blur(2px);
+}
+.frame {
+    border: solid black 50px;
+    width: 500px;
+    padding: 50px;
+    margin: 20px auto;
+}
+.one {
+    width: 425px;
+    height: 150px;
+    background-color: #e7b762;
+    margin: 20px auto;
+    box-shadow: 0 0 3px 3px #efb762;
+    border-radius: 9px;
+    transform: rotate(-0.6deg);
+}
+.two {
+    width: 475px;
+    height: 200px;
+    background-color: #8f0401;
+    margin: 0 auto 20px;
+    box-shadow: 0 0 3px 3px #8f0401;
+    border-radius: 8px 10px 8px 10px;
+    transform: rotate(0.4deg)
+}
+.three {
+    width: 91%;
+    height: 28%;
+    background-color: #b20403;
+    margin: auto;
+    filter: blur(2px);
+    box-shadow: 0 0 5px 5px #b20403;
+    border-radius: 30px 25px 60px 12px;
+    transform: rotate(-0.2deg)
+}
+.one, .two {
+    filter: blur(1px);
+}
+
+/*
+overflow: Le podemos que queremos hacer con el contenido que se esta desbordando de la caja
+
+overflow: hidden;   le decimos que todo el contenido sobrante lo va a ocultar, manteniendo las dimensiones originales del contenedor
+
+overflow: scroll;  nos proporciona una barra horizontal y vertical que nos permite navegar incluso en el contenido sobrante
+
+overflow: auto;    agrega las barras vertical y horizontal (si es que es necesaria)
+
+filter: blur(4px)    aplica un desenfoque gaussiano a un elemento
+
+box-shadow: 10px 5px 5px black;    permite añadir efectos de sombra alrededor de un elemento (desplazamiento horizontal, desplazamiento vertical, el tercer, cuarto y quinto valor son opcionales. El tercer valor indica cuanto desenfoque va a tener la sombra creada, el cuarto valor indica la difusion de la sombra y el quinto valor indica el color de la sombra)
+
+border-radius: 5px 5px 5px 5px;    redondea las esquinas de un elemento
+
+transform: rotate(45deg);    con esta propiedad se define una transformacion que consiste en girar un elemento alrededor de un punto fijo. Si se le da un valor positivo gira en sentido del reloj, si es negativo es lo contrario.    
+*/

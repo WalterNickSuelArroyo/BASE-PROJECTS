@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+.gallery img {
+    width: 100%;
+    max-width: 350px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f5f6f7;
+}
+.header {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 32px;
+    background-color: #0a0a23;
+    color: #fff;
+    border-bottom: 4px solid #fdb347;
+}
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 16px;
+}
+.gallery::after {
+    content: "";
+    width: 350px;
+}
+
+
+
+/*
+(asterico *)   es el selector universal, permite dar estilos a todos los elementos contenidos en una pagina
+
+box-sizing: border box;     esta propiedad permite incluir al relleno y el borde en el ancho y alto total de un elemento
+
+text-transform: uppercase;    permite poner en mayusculas un texto
+
+flex-wrap: wrap;    especifica que los elementos flex puedan colocarse en varia lineas
+
+justify-content: center;   con justify-content definimos como el navegador distribuye el espacio entre y alrededor de los items flex a lo largo del eje principal de su contenedor. Con center Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el primer item es el mismo que el espacio entre el borde del final principal y el último item de la línea.
+
+object-fit: cover;     indica como el contenido de un elemento reemplazado (puede ser una imagen o un video), deberia redimensionarse para ajustarse a su contenedor. Con cover El contenido reemplazado se dimensiona para mantener su relación de aspecto mientras llena el cuadro de contenido completo del elemento. Si la relación de aspecto del objeto no coincide con la relación de aspecto de su caja, entonces el objeto se recortará para que se ajuste.
+
+.class::after  creamos un pseudoelemento que es el ultimo hijo del elemento seleccionado. Podemos utilizarlo para añadir un elemento vacio despues de la ultima imagen. Si le damos el mismo ancho que las imágenes, empujará la última imagen a la izquierda cuando la galería esté en un diseño de dos columnas.
+.container::after {
+  content: "";
+  width: 860px;
+}
+*/
