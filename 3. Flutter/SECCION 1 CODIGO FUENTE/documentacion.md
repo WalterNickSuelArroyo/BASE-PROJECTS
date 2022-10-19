@@ -63,6 +63,7 @@ void main(List<String> arguments) {
   print(arguments);
 }
 ```
+
 ```dart
 {
     "configurations": [
@@ -87,8 +88,6 @@ void main(List<String> arguments) {
     ]
 }
 ```
-
-
 
 # SECCION 5: WIDGETS MAS USADOS EN FLUTTER
 
@@ -362,7 +361,6 @@ class MyContainer extends StatelessWidget {
 
 ![visualizacion](imagenes/7.PNG)
 
-
 # 88. El widget Container - parte 5
 
 ```dart
@@ -455,6 +453,7 @@ class MyContainer extends StatelessWidget {
   }
 }
 ```
+
 ![visualizacion](imagenes/9.PNG)
 
 # 90. El widget Column - parte 1
@@ -503,6 +502,7 @@ class MyColumn extends StatelessWidget {
   }
 }
 ```
+
 ![visualizacion](imagenes/10.PNG)
 
 # 91. El widget Column - parte 2
@@ -551,8 +551,8 @@ class MyColumn extends StatelessWidget {
   }
 }
 ```
-![visualizacion](imagenes/11.PNG)
 
+![visualizacion](imagenes/11.PNG)
 
 # 92. El widget Column - parte 3
 
@@ -602,6 +602,7 @@ class MyColumn extends StatelessWidget {
   }
 }
 ```
+
 ![visualizacion](imagenes/12.PNG)
 
 # 93. El widget Row
@@ -648,8 +649,8 @@ class MyRow extends StatelessWidget {
   }
 }
 ```
-![visualizacion](imagenes/13.PNG)
 
+![visualizacion](imagenes/13.PNG)
 
 # 94. Errores de overflow
 
@@ -687,3 +688,92 @@ class MyRow extends StatelessWidget {
 }
 ```
 ![visualizacion](imagenes/14.PNG)
+
+
+# 95. El widget flexible - parte 1
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTextStyle(
+      style: const TextStyle(color: Colors.black),
+      child: Container(
+          color: Colors.white,
+          alignment: Alignment.centerLeft,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Flexible(
+                  fit: FlexFit.tight,
+                  child: Container(
+                    width: 50,
+                    height: 50,
+                    color: Colors.blue,
+                  )),
+              Flexible(
+                child: Container(
+                  width: 170,
+                  height: 50,
+                  color: Colors.red,
+                ),
+              ),
+              Flexible(
+                flex: 3,
+                child: Container(
+                  width: 320,
+                  height: 50,
+                  color: Colors.yellow,
+                ),
+              )
+            ],
+          )),
+    );
+  }
+}
+```
+![visualizacion](imagenes/15.PNG)
+
+# 96. El widget flexible - parte 2
+
+```dart
+import 'package:flutter/material.dart';
+
+class MyRow extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTextStyle(
+      style: const TextStyle(color: Colors.black),
+      child: Container(
+          color: Colors.white,
+          alignment: Alignment.centerLeft,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Flexible(
+                child: FlutterLogo(
+                  size: 200,
+                ),
+              ),
+              Flexible(
+                flex: 2,
+                child: FlutterLogo(
+                  size: 250,
+                ),
+              ),
+              Flexible(
+                child: FlutterLogo(
+                  size: 300,
+                ),
+              ),
+            ],
+          )),
+    );
+  }
+}
+```
+![visualizacion](imagenes/16.PNG)

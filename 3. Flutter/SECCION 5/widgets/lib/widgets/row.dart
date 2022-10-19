@@ -8,24 +8,27 @@ class MyRow extends StatelessWidget {
       child: Container(
           color: Colors.white,
           alignment: Alignment.centerLeft,
-          child: Container(
-            color: Colors.grey,
-            width: 300,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Container(
-                  width: 50,
-                  height: 50,
-                  color: Colors.blue,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Flexible(
+                child: FlutterLogo(
+                  size: 200,
                 ),
-                const SizedBox(width: 20),
-                const Expanded(
-                  child: Text("Hola"),
-                )
-              ],
-            ),
+              ),
+              Flexible(
+                flex: 2,
+                child: FlutterLogo(
+                  size: 250,
+                ),
+              ),
+              Flexible(
+                child: FlutterLogo(
+                  size: 300,
+                ),
+              ),
+            ],
           )),
     );
   }
