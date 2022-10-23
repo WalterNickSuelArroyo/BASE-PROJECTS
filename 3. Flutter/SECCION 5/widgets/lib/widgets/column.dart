@@ -15,27 +15,27 @@ class MyColumn extends StatelessWidget {
           child: Center(
             child: Container(
               color: Colors.grey,
+              width: 400,
               child: Column(
                 children: [
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      color: Colors.red,
-                    ),
-                  ),
-
-                  Expanded(
-                    flex: 3,
+                  Flexible(
                     child: Container(
                       color: Colors.blue,
+                      child: const FlutterLogo(
+                        size: 100,
+                      ),
                     ),
                   ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.yellow,
+                  const Flexible(
+                    child: FlutterLogo(
+                      size: 200,
                     ),
                   ),
+                  Container(
+                    height: 100,
+                    width: 300,
+                    color: Colors.red,
+                  )
                   //const SizedBox(height: 100),
                 ],
               ),

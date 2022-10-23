@@ -777,3 +777,6 @@ class MyRow extends StatelessWidget {
 }
 ```
 ![visualizacion](imagenes/16.PNG)
+
+
+# 97. Datos adicionales sobre Row y Column
