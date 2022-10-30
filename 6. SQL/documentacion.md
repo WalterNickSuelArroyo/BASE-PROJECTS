@@ -48,3 +48,27 @@ Para crear la tabla se dio clic derecho en Tables de la base de datos Ejemplo y 
 ![creando tabla](3.png)
 
 ![creando tabla](4.png)
+
+## 25. ¿Que es una Primary Key?
+
+![creando tabla](5.png)
+
+## 26. ¿Que es un Foreign Key?
+
+![creando tabla](6.png)
+
+![creando tabla](7.png)
+
+## 27. ¿Que es la propiedad IDENTITY?
+
+![creando tabla](8.png)
+
+![creando tabla](9.png)
+
+## 28. Normalizacion de Base de Datos
+
+![creando tabla](10.png)
+
+![creando tabla](11.png)
+
+![creando tabla](12.png)
